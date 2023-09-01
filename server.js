@@ -26,9 +26,9 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 app.use('/uploads',express.static('uploads'));
 
-app.get('/',function(req, res){
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// app.get('/',function(req, res){
+//     res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
 app.use('/api/blog',blogRoutes);
 app.use('/api/project',projectRoutes)
 app.use((req, res, next) =>{
