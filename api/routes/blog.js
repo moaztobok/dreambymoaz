@@ -39,7 +39,7 @@ const upload = multer({
 
 router.get('/', async (req, res) => {
     try {
-        const response = await Blog.find();
+        const response = await Blog.find().sort({blogDate:-1});
         console.log(response);
         res.status(200).json({  
             data:response,
